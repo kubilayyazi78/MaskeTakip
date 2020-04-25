@@ -74,7 +74,7 @@ namespace Workaround
             person.FirstName = "KUBİLAY";
             person.LastName = "YAZI";
             person.DateOfBirthYear = 1996;
-            person.NationalIdentity=57241612288;
+            person.NationalIdentity=45545;
             PttManager pttManager = new PttManager(new PersonManager());
             pttManager.GiveMask(person);
           //  pttManager.GiveMask(person);
