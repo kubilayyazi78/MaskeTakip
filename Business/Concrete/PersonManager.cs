@@ -1,13 +1,14 @@
-﻿using Entities.Concrete;
+﻿using Business.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Business.Concrete
-{
-  public  class PersonManager
+{//çıplak klas kalmasın
+    public class PersonManager:IApplicantService
     {
-          //encaosulation
+        //encaosulation
         public void ApplyForMask(Person person)
         {
 
@@ -16,6 +17,11 @@ namespace Business.Concrete
         public List<Person> GetList()
         {
             return null;
+        }
+
+        public bool CheckPerson(Person person)
+        {
+            return true;
         }
     }
 }
