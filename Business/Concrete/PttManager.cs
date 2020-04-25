@@ -6,15 +6,23 @@ using System.Text;
 
 namespace Business.Concrete
 {
-    public class PttManager
+    public class PttManager:ISupplierService
     {
         private IApplicantService _applicantService;
+        public PttManager(IApplicantService applicantService)
+        {
+            _applicantService = applicantService;
+        }
         public void GiveMask(Person person)
         {
 
-            if (personManager.CheckPerson(person))
+            if (_applicantService.CheckPerson(person))
             {
                 Console.WriteLine(person.FirstName + "maske verildi");
+            }
+            else
+            {
+                Console.WriteLine("maske verilemedi");
             }
         }
     }

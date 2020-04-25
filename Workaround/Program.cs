@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business.Concrete;
+using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 
 namespace Workaround
@@ -68,6 +70,14 @@ namespace Workaround
             {
                 Console.WriteLine(item);
             }
+            Person person = new Person();
+            person.FirstName = "KUBİLAY";
+            person.LastName = "YAZI";
+            person.DateOfBirthYear = 1996;
+            person.NationalIdentity=57241612288;
+            PttManager pttManager = new PttManager(new PersonManager());
+            pttManager.GiveMask(person);
+          //  pttManager.GiveMask(person);
 
             Console.ReadLine();
         }
